@@ -1,8 +1,12 @@
 // Full Documentation - https://docs.turbo360.co
 const vertex = require('vertex360')({ site_id: process.env.TURBO_APP_ID })
 const express = require('express')
-
+const path = require('path');
 const app = express() // initialize app
+
+app.set("view engine","html")
+app.set('views', path.join(__dirname, 'views'));
+app.engine('html',require('ejs').renderFile);
 
 /*  Apps are configured with settings as shown in the conig object below.
     Options include setting views directory, static assets directory,

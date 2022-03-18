@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   {{>head}}
+   <%- include('./parties/head'); %>
 </head>
 <body>
 
 <!-- ----------------------Nav----------------- -->
 
- {{>nav}}
+<%- include('./parties/nav'); %>
     
 
 
   <!-- ----------------------footer----------------- -->
-<div class=" row d-flex align-content-end">
+  <%- include('./parties/footer'); %>
 
-    {{>footer}}
-</div>
-
-  {{>script}}
+  <%- include('./parties/script'); %>
   </body>
 </html>
